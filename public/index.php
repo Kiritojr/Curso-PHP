@@ -1,3 +1,5 @@
+<?php require "../app/functions/pages.php"?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,9 +12,18 @@
 </head>
   <body>
 
+    <div class="container">
     <?php 
+      try {
+
       require load();
+      
+      } catch (Exception $e) {
+
+        echo $e->getMessage();
+      }
     ?>
-    
+    </div>
+
   </body>
 </html>
