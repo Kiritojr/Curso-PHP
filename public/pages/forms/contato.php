@@ -1,10 +1,14 @@
 <?php
 
-$validate = validate([
+  require "../../../functions.php";
   
-  'name' => 's',
-  'email' => 'e' 
+  dd($_POST);
 
-  ]);
+  //$validate = validate([
+//
+  //  'name' => 's',
+  //  'email' => 'e' 
+//
+  //  ]);
 
 ?>
