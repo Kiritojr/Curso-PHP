@@ -1,6 +1,11 @@
 <?php
 
   require "../../../functions.php";
-  
+    
+  dd($_POST);
 
+  $validate = validate([
+    'name' => 's',
+    'email' => 'e'
+  ]);
 ?>
