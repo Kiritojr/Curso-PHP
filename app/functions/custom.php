@@ -7,4 +7,15 @@
     die();
   }
 
+  function request() {
+
+    $request = $_SERVER['REQUEST_METHOD'];
+
+    if ($request == 'POST') {
+      return 'POST';
+    }
+
+    return 'GET';
+  }
+
 ?>

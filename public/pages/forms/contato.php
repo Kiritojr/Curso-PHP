@@ -2,10 +2,12 @@
 
   require "../../../functions.php";
     
-  dd($_POST);
+  dd($_SERVER['REQUEST_METHOD']);
 
   $validate = validate([
     'name' => 's',
-    'email' => 'e'
+    'email' => 'e',
+    'subject' => 's',
+    'message' => 's'
   ]);
 ?>
