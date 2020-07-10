@@ -1,22 +1,30 @@
 <?php
 
-  function validate(array $fields) {
+use ___PHPSTORM_HELPERS\object;
+
+function validate(array $fields) {
     
     $validate = [];
-    foreach($fields as $key => $type) {
+    foreach($fields as $field => $type) {
 
       switch($type) {
 
         case 's':
-          $validate[$field] = filter_var($_POST[$key], FILTER_SANITIZE_STRING);
+          $validate[$field] = filter_var($_POST[$field], FILTER_SANITIZE_STRING);
           break;
 
-          case 'i':
-            $validate[$field] = filter_var($_POST[$key], FILTER_SANITIZE_NUMBER_INT);
-            break;
+        case 'i':
+          $validate[$field] = filter_var($_POST[$field], FILTER_SANITIZE_NUMBER_INT);
+          break;
 
+        case 'e':
+          $validate[$field] = filter_var($_POST[$field], FILTER_SANITIZE_NUMBER_INT);
+          break;
+        
       }
     }
+
+    return (object) $validate;
   }
 
 ?>
