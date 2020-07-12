@@ -1,6 +1,6 @@
 <?php
 
-use ___PHPSTORM_HELPERS\object;
+//use ___PHPSTORM_HELPERS\object;
 
 function validate(array $fields) {
 
@@ -27,6 +27,17 @@ function validate(array $fields) {
     }
 
     return (object) $validate;
+  }
+
+  function isEmpety() {
+
+    $request = request();
+
+    $empety = false;
+    foreach($request as $key => $value) {
+
+      if (empty($request[$key]));
+    }
   }
 
 ?>

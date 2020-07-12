@@ -7,7 +7,7 @@
 
     if (!file_exists($page)) {
       
-      throw new \Exception("PAGE NOT EXIST!");
+      throw new Exception("PAGE NOT EXIST!");
     
     }
 
