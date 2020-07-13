@@ -1,3 +1,7 @@
+<?php 
+  get('message');
+?>
+
 <form action="/pages/forms/contato.php" method="POST" role="form">
   <legend>Contato</legend>
 

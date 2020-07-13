@@ -1,13 +1,11 @@
 <?php
 
   require "../../../functions.php";
-    
-  dd($_SERVER['REQUEST_METHOD']);
 
   if (isEmpty()) {
     flash('message', 'Preencha todos os campos.');
 
-    return redirect('?page=contato');
+    header("location:/?page=contato");
   }
 
   $validate = validate([
